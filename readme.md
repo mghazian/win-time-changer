@@ -25,6 +25,7 @@ tc.exe save <identifier>[ <Y-m-d H:i:s.ms>]
 ```
 
 `<identifier>` is the name of the saved time that will be referred as.
+
 `<Y-m-d H:i:s.ms>` is the date to be saved. Can be left out. If left out, current system time will be saved. Make sure to enclose the date with doublequotes.
 
 #### Example
@@ -32,14 +33,14 @@ tc.exe save <identifier>[ <Y-m-d H:i:s.ms>]
 ##### Save given date
 
 ```
-tc.exe save birthday "1986-10-04 00:00:00.000"
+> tc.exe save birthday "1986-10-04 00:00:00.000"
 ```
 
 This will create file _birthday.tc_
 
 
 ```
-tc.exe save future "2050-12-31 22:59:00.000"
+> tc.exe save future "2050-12-31 22:59:00.000"
 ```
 
 This will create file _future.tc_
@@ -47,7 +48,7 @@ This will create file _future.tc_
 ##### Save current date
 
 ```
-tc.exe save now
+> tc.exe save now
 ```
 
 This will create file _now.tc_ that contains the time the command called
@@ -67,14 +68,15 @@ tc.exe load <identifier>
 #### Example
 
 ```
-tc.exe save birthday "1986-10-04 00:00:00.000"
-:: a file named 'birthday.tc' should be created
-tc.exe load birthday.tc
+> tc.exe save birthday "1986-10-04 00:00:00.000"
+:: a file named 'birthday.tc' would be created
+
+> tc.exe load birthday.tc
 ```
 
 ### `restore`
 
-Restores the system time before using the command, assuming no other way of changing system's time is used until the command is called. The system time will be restored as if the command is not used in the first place.
+Restores the system time before using the command, assuming no other way of changing system's time is used until the command is called. The system time will be restored as if the time is never changed in the first place.
 
 #### Command Format
 
@@ -89,7 +91,7 @@ tc.exe restore
 :: ...make various save and load
 :: ...three real life hours passed
 
-tc.exe restore
+> tc.exe restore
 :: system date set to 2020-10-04 15:47:10.254
 ```
 
