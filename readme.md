@@ -121,5 +121,3 @@ D:\dir1\>call C:/timechanger/bin/tc.exe load foo
 The good news is user can `load` the time just by moving to the directory containing the file (alternatively moving the file to the cwd). The bad news is user cannot `restore` the time correctly if successful `load` happened in different location.
 
 Current suggestion is to move the cwd to where the executable is, then call the command there.
-
-The solution for this is to stick to one place when calling the command
